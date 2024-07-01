@@ -9,10 +9,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $senha = $_POST['senha'];
     $salario = $_POST['salario'];
     $cargo = $_POST['cargo'];
-    // Removendo o argumento não definido
-    add_tb_funcionarios($nome, $email, $senha, $salario, $cargo);
-    if ($conexao->error) {
-        echo '<script>alert("Erro ao cadastrar: ' . $conexao->error . '")</script>';
+
+    // Chama a função de adicionar funcionário e exibe a resposta
+    if (add_tb_funcionarios($conexao, $nome, $email, $senha, $salario, $cargo)) {
+        echo "<div class='alert alert-success' role='alert'>Funcionário cadastrado com sucesso</div>";
+    } else {
+        echo "<div class='alert alert-danger' role='alert'>$server_resposta</div>";
     }
 }
 
@@ -31,13 +33,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="Box">
             <form action="Cadastro.php" method="POST">
                 <label for="nome">Nome:</label><br>
-                <input type="text" name="nome" placeholder="Nome"><br>
+                <input type="text" name="nome" placeholder="Nome" required><br>
                 <label for="email">Email:</label><br>
-                <input type="email" name="email" placeholder="Email"><br>
+                <input type="email" name="email" placeholder="Email" required><br>
                 <label for="senha">Senha:</label><br>
-                <input type="password" name="senha" placeholder="Senha"><br>
+                <input type="password" name="senha" placeholder="Senha" required><br>
                 <label for="salario">Salario:</label><br>
-                <input type="number" name="salario" placeholder="Salario"><br>
+                <input type="number" name="salario" placeholder="Salario" required><br>
                 <label for="cargo">Cargo:</label><br>
                 <select name="cargo">
                     <option value="1">Fachineiro</option>
@@ -50,6 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </select><br>
                 <button type="submit">Cadastrar</button>
             </form>
+            <a href="Login.php">Voltar</a>
         </div>
     </div>
     

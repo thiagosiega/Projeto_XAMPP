@@ -56,3 +56,50 @@ form button[type="submit"] {
 form button[type="submit"]:hover {
     background-color: #a11dc9;
 }
+/* Estilo para alertas de sucesso */
+.alert-success {
+    animation: blink-success 1.5s infinite;
+}
+
+@keyframes blink-success {
+    0% {
+        color: green;
+    }
+    50% {
+        color: transparent;
+    }
+    100% {
+        color: green;
+    }
+}
+
+/* Estilo para alertas de perigo */
+.alert-danger {
+    animation: blink-danger 1.5s infinite;
+}
+
+@keyframes blink-danger {
+    0% {
+        color: red;
+    }
+    50% {
+        color: transparent;
+    }
+    100% {
+        color: red;
+    }
+}
+a{
+    color: #4CAF50;
+    background-color: #a11dc95e;
+    text-decoration: none;
+    height: 50px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+a:hover{
+    color: #5cc91d;
+}
