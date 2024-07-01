@@ -1,4 +1,6 @@
 <?php
+
+
 function conectar() {
     $host = 'localhost';
     $user = 'root';
@@ -15,15 +17,28 @@ function conectar() {
     return $mysqli;
 }
 
-function add_tb_funcionarios($conexao) {
-    $sql = "SELECT * FROM funcionarios";
+function desconectar($conexao) {
+    $conexao->close();
+}
+
+function add_tb_funcionarios($conexao, $nome, $email, $senha, $salario, $cargo) {
+    //criptografa a senha
+    $senha = password_hash($senha, PASSWORD_DEFAULT);
+    $ID = rand(10, 99);  
+    //verifica se  ID já existe
+    $sql = "SELECT * FROM tb_funcionarios WHERE ID = $ID";
     $result = $conexao->query($sql);
-    $funcionarios = array();
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $funcionarios[] = $row;
-        }
+    while ($result->num_rows > 0) {
+        $ID = rand(10, 99);
+        $sql = "SELECT * FROM tb_funcionarios WHERE ID = $ID";
+        $result = $conexao->query($sql);
     }
-    return $funcionarios;
+    // Insira os dados na tabela tb_funcionarios
+    $sql = "INSERT INTO tb_funcionarios (ID, Nome, Email, Senha, Salario, Cargo) VALUES ($ID, '$nome', '$email', '$senha', $salario, $cargo)";
+    $conexao->query($sql);
+    if ($conexao->error) {
+        return $conexao->error;
+    }
+    desconectar($conexao);
 }
 ?>
