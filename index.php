@@ -2,7 +2,7 @@
 
 session_start();
 if (isset($_SESSION['ID'])) {
-    echo '<script>alert("Você já está logado")</script>';
+    header('Location: Central/Home.php');
 }else{
     header('Location: Home/Login.php');
 }

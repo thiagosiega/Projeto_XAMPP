@@ -1,0 +1,111 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #E5DDD5; /* Cor de fundo similar ao WhatsApp */
+}
+
+/* Estilos da barra lateral */
+.Sidebar {
+    width: 50px; /* Largura inicial da sidebar */
+    height: 100%;
+    background-color: #075E54; /* Cor da barra lateral similar ao WhatsApp */
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 0.50s; /* Transição suave para a largura */
+    color: white;
+}
+
+.Sidebar_Container {
+    display: none; /* Inicialmente escondido */
+    padding: 20px;
+}
+
+.Sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.Sidebar a:hover {
+    background-color: #128C7E; /* Cor de hover similar ao WhatsApp */
+}
+
+/* Estilos do conteúdo principal */
+.Container {
+    margin-left: 50px; /* Alinha com a largura inicial da sidebar */
+    padding: 20px;
+    transition: margin-left 0.50s;
+}
+
+.criar-chat form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.criar-chat input[type="text"] {
+    height: 30px;
+    padding: 0 10px;
+    width: 100%;
+    border: 1px solid #DDD;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.criar-chat button {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #25D366;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.50s;
+}
+
+.criar-chat button:hover {
+    background-color: #128C7E;
+}
+
+.listar-chats h2 {
+    color: #075E54;
+    margin-bottom: 20px;
+}
+
+.listar-chats a {
+    display: block;
+    padding: 10px;
+    background-color: #FFF;
+    color: #333;
+    border: 1px solid #DDD;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: background-color 0.50s;
+}
+
+.listar-chats a:hover {
+    background-color: #F0F0F0;
+}
+
+button {
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    background-color: #25D366;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #128C7E;
+}

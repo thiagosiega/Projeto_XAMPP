@@ -135,7 +135,7 @@ function logar ($conexao, $ID, $senha) {
     // Inicia a sessão e redireciona para a página de login
     session_start();
     $_SESSION['ID'] = $ID;
-    header('Location: ../Cental/Home.php');
+    header('Location: ../Central/Home.php');
     return true;
 }
 
@@ -155,12 +155,10 @@ function infor_funcio($conexao, $ID) {
             'Salario' => $row['Salario'],
             'Cargo' => $row['Cargo']
         );
-        return $infor;
+        return $infor; // Retorna a array associativa com todas as informações
     } else {
-        return null;
+        return null; // Retorna null se não encontrar resultados
     }
 }
-
-
 
 ?>

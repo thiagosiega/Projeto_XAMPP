@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background-color: #251bb171;
+}
+
+.Container {
+    display: flex;
+    flex-direction: column;
+    align-items: last baseline;
+    margin-top: 20px;
+}
+
+.mensagens {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.mensagem {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+textarea {
+    width: 80%;
+    height: 50px;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    resize: none;
+}
+
+button {
+    width: 20%;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+a {
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #007bff;
+}
+
+a:hover {
+    background-color: #00ff4c;
+    color: white;
+}
