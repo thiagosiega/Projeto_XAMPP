@@ -16,6 +16,8 @@ body {
     left: 0;
     transition: width 0.50s; /* Transição suave para a largura */
     color: white;
+    text-align: center;
+
 }
 
 .Sidebar_Container {
@@ -29,10 +31,11 @@ body {
     display: block;
     padding: 10px 0;
     margin-bottom: 10px;
+    border-radius: 15px;
 }
 
 .Sidebar a:hover {
-    background-color: #128C7E; /* Cor de hover similar ao WhatsApp */
+    background-color: #3212beb0; /* Cor de hover similar ao WhatsApp */
 }
 
 /* Estilos do conteúdo principal */

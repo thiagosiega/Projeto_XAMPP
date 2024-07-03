@@ -1,19 +1,19 @@
 <?php
 include_once "../Server/Server.php";
 include_once "Controler.php";
-session_start();
-$conexao = conectar();
-$ID = $_SESSION['ID'];
 
-if (!isset($ID)) {
-    echo "<script>alert('Você não está logado!')</script>";
+//verifica se tem alguma sessão ativa
+session_start();
+if (!isset($_SESSION['ID'])) {
+    header('Location: ../index.php');
     exit();
 }
 
-verificar_sessao($conexao, $ID);
-
+$conexao = conectar();
+$ID = $_SESSION['ID'];
 $Infor = infor_funcio($conexao, $ID);
-$nome = htmlspecialchars($Infor['Nome']); // Sanitizar a saída
+$nome = htmlspecialchars($Infor['Nome']);
+
 ?>
 
 <!DOCTYPE html>
@@ -29,11 +29,10 @@ $nome = htmlspecialchars($Infor['Nome']); // Sanitizar a saída
         <div class="Sidebar_Container">
             <h2>Olá <?php echo htmlspecialchars($nome); ?></h2>
             <a href="Home.php">Home</a>
-            <a href="Perfil.php">Perfil</a>
-            <a href="Sair.php">Sair</a>
+            <a href="Perfil/Perfil.php">Perfil</a>
+            <a href="../Server/Sair.php">Sair</a>
         </div>
     </div>
-
     <script>
         const sidebar = document.querySelector('.Sidebar');
         const sidebarContainer = document.querySelector('.Sidebar_Container');

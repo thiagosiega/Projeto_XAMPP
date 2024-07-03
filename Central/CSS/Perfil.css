@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ECE5DD; /* Cinza claro do WhatsApp */
+    transition: background-color 0.5s ease;
+}
+
+.Sidebar {
+    position: fixed;
+    width: 50px;
+    height: 100%;
+    background-color: #128C7E; /* Verde principal do WhatsApp */
+    transition: width 0.5s ease;
+}
+
+.Sidebar h2 {
+    color: #FFFFFF; /* Branco */
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.Sidebar_Container {
+    display: none;
+}
+
+.Sidebar_Container a {
+    display: block;
+    padding: 10px;
+    color: #FFFFFF; /* Branco */
+    text-decoration: none;
+    text-align: center;
+}
+
+.Sidebar_Container a:hover {
+    background-color: #25D366; /* Verde claro do WhatsApp */
+    transition: background-color 0.3s ease;
+}
+
+.Container {
+    margin-left: 50px;
+    padding: 10px;
+    background-color: #DCF8C6; /* Amarelo do WhatsApp */
+    height: 100vh;
+    transition: margin-left 0.5s ease, background-color 0.5s ease;
+}
+
+.infor_perfil {
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 80%;
+    background-color: #128C7E; /* Verde principal do WhatsApp */
+    border-radius: 15px;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.infor_perfil:hover {
+    transform: scale(1.05);
+}
+
+.infor_perfil img {
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    background-color: #FFFFFF; /* Branco */
+}
+
+.infor_perfil button {
+    margin: 5px;
+    padding: 5px;
+    width: 100px;
+    background-color: #25D366; /* Verde claro do WhatsApp */
+    color: #FFFFFF; /* Branco */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.infor_perfil button:hover {
+    background-color: #128C7E; /* Verde principal do WhatsApp */
+    transform: scale(1.1);
+}
+
+.Editrar {
+    display: none;
+}
+
+.Editrar h2 {
+    color: #FFFFFF; /* Branco */
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.Editrar form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    background-color: #34B7F1; /* Azul do WhatsApp */
+    border-radius: 15px;
+    transition: background-color 0.5s ease;
+}
+
+.Editar infor_perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 80%;
+    background-color: #128C7E; /* Verde principal do WhatsApp */
+    border-radius: 15px;
+}
+
+.Editrar form input[type="text"],
+.Editrar form input[type="email"],
+.Editrar form input[type="date"],
+.Editrar form input[type="file"],
+.Editrar form select {
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.Editrar form input[type="text"]:focus,
+.Editrar form input[type="email"]:focus,
+.Editrar form input[type="date"]:focus,
+.Editrar form input[type="file"]:focus,
+.Editrar form select:focus {
+    border-color: #25D366; /* Verde claro do WhatsApp */
+}
+
+.Editrar form input[type="submit"] {
+    margin: 5px;
+    padding: 5px;
+    width: 100px;
+    background-color: #128C7E; /* Verde principal do WhatsApp */
+    color: #FFFFFF; /* Branco */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.Editrar form input[type="submit"]:hover {
+    background-color: #25D366; /* Verde claro do WhatsApp */
+    transform: scale(1.1);
+}

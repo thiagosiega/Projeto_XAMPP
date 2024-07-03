@@ -25,6 +25,12 @@ function verificar_sessao($conexao, $ID) {
     }
 }
 
+function sair () {
+    session_start();
+    session_destroy();
+    header('Location: ../index.php');
+}
+
 function conectar() {
     $host = 'localhost';
     $user = 'root';
@@ -153,7 +159,8 @@ function infor_funcio($conexao, $ID) {
             'Nome' => $row['Nome'],
             'Email' => $row['Email'],
             'Salario' => $row['Salario'],
-            'Cargo' => $row['Cargo']
+            'Cargo' => $row['Cargo'],
+            'Senha' => $row['Senha']
         );
         return $infor; // Retorna a array associativa com todas as informações
     } else {
